@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Application</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="card" aria-labelledby="page-title">
+        <h1 id="page-title">Weather Finder</h1>
+        <p class="sub">Enter a location to view the current weather.</p>
+
+        <form class="form" id="location-form">
+          <div class="group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="Montreal" required />
+          </div>
+
+          <div class="group">
+            <label for="province">Province/State</label>
+            <input
+              type="text"
+              id="province"
+              name="province"
+              placeholder="Quebec"
+              required
+            />
+          </div>
+
+          <div class="group">
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" placeholder="Canada" required />
+          </div>
+
+          <button type="button" id="get-weather-button">Get Weather</button>
+        </form>
+
+        <section class="info" aria-live="polite">
+          <p><strong>Location</strong><span id="location-value"></span></p>
+          <p><strong>Current Temperature</strong><span id="temperature-value"></span></p>
+          <p><strong>Apparent Temperature (Feels Like)</strong><span id="feels-like-value"></span></p>
+          <p><strong>Wind Speed</strong><span id="wind-speed-value"></span></p>
+          <p><strong>Relative Humidity</strong><span id="humidity-value"></span></p>
+        </section>
+
+        <section class="error" aria-live="assertive" role="alert">
+        </section>
+
+      </section>
+    </main>
+    <script src="index.js" defer></script>
+  </body>
+</html>
